@@ -59,7 +59,11 @@
 };
 
 // Overrides for the input listener node
-&trackball_central_listener { status = "okay"; device = <&trackball_central>; input-processors = <&zip_automouse>; };
+&trackball_central_listener {
+  status = "okay";
+  device = <&trackball_central>;
+  input-processors = <&zip_temp_layer 4 2000>;
+};
 
 &pro_micro_i2c {
     status = "okay";
