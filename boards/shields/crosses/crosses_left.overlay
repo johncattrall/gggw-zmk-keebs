@@ -48,6 +48,11 @@
 		, <&zip_ble_report_rate_limit>;
 };
 
+
+&zip_xy_to_scroll_mapper {
+    scroll-divisor = <8>;   /* bigger = slower */
+};
+
 &pro_micro_i2c {
     status = "okay";
 
