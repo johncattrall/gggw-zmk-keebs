@@ -45,12 +45,8 @@
   device = <&trackball_peripheral>;
   input-processors
     = <&zip_xy_to_scroll_mapper>
-		, <&zip_ble_report_rate_limit>;
-};
-
-
-&zip_xy_to_scroll_mapper {
-    scroll-divisor = <8>;   /* bigger = slower */
+    , <&zip_scroll_scaler 1 8>   /* multiplier=1, divisor=8 => slower scroll */
+    , <&zip_ble_report_rate_limit>;
 };
 
 &pro_micro_i2c {
